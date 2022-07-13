@@ -1,0 +1,11 @@
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.centered img {
+  height: 230px;
+  width: 300px;
+}
