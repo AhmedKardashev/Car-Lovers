@@ -1,0 +1,8 @@
+.list {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  list-style: none;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
