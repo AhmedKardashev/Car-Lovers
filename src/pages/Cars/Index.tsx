@@ -1,6 +1,3 @@
-// import { Link } from "react-router-dom";
-// import classes from "./CarDetail.module.css";
-// import CarList from "../../components/CarList";
 import CarList from "../../components/CarList/Index";
 
 import { useCallback, useContext, useEffect, useState } from "react";

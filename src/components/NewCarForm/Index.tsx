@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { FormEvent, useContext, useRef } from "react";
 import CarsContext from "../../store/cars-context";
 import classes from "./NewCarForm.module.css";
 
@@ -20,7 +20,7 @@ const NewCarForm: React.FC = (props: any) => {
   const yearInputRef = useRef<HTMLInputElement>();
   const idInputRef = useRef<HTMLInputElement>();
 
-  function submitHandler(event: any) {
+  function submitHandler(event: FormEvent) {
     event.preventDefault();
 
     const enteredTitle = titleInputRef.current?.value;

@@ -3,7 +3,6 @@ import { useRef, useContext, FormEvent } from "react";
 import { useHistory } from "react-router-dom";
 
 import AuthContext from "../../store/auth-context";
-// import SignInService from "../../services/SignInService";
 
 type AuthContextType = {
   id: string | null;
@@ -27,20 +26,6 @@ const SignIn: React.FC = () => {
     event.preventDefault();
     const enteredLoginEmail = emailLoginInput.current?.value;
     const enteredLoginPassword = passwordLoginInput.current?.value;
-
-    // if (enteredLoginEmail && enteredLoginPassword) {
-    //   SignInService(enteredLoginEmail, enteredLoginPassword);
-    // }
-    // const userId = localStorage.getItem("id");
-
-    // console.log(userId);
-
-    // if (userId !== null) {
-    //   authCtx.onLoggin(userId);
-    // } else {
-    //   console.log("error");
-    //   return;
-    // }
 
     if (emailLoginInput.current && passwordLoginInput.current) {
       emailLoginInput.current.value = "";

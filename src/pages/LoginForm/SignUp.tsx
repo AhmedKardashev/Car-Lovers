@@ -2,7 +2,6 @@ import classes from "./Forms.module.css";
 import { useRef, useState, FormEvent, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import AuthContext from "../../store/auth-context";
-// import SignUpService from "../../services/SignUpService";
 
 const SignUp: React.FC = () => {
   const history = useHistory();
@@ -36,26 +35,6 @@ const SignUp: React.FC = () => {
       }
     }
 
-    // if (enteredRegisterEmail && enteredRegisterPassword) {
-    //   SignUpService(enteredRegisterEmail, enteredRegisterPassword);
-    // }
-
-    // const userId = localStorage.getItem("userId");
-
-    // if (userId !== null) {
-    //   authCtx.onLoggin(userId);
-    // }
-
-    // if (
-    //   emailInput.current &&
-    //   passwordInput.current &&
-    //   confirmPasswordInput.current
-    // ) {
-    //   emailInput.current.value = "";
-    //   passwordInput.current.value = "";
-    //   confirmPasswordInput.current.value = "";
-    // }
-
     fetch(
       "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDyZKEUQQ69dqFZexbEz20kFMaQMlrdCr0",
       {
@@ -80,7 +59,6 @@ const SignUp: React.FC = () => {
       })
       .then((data) => {
         console.log(data);
-        // localStorage.setItem("id", data.localId);
         authCtx.onLoggin(data.localId);
         return data;
       })
